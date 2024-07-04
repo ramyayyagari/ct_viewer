@@ -59,6 +59,8 @@ const InvestigationalUseDialog = ({
 
   if (isHidden) {
     return null;
+  } else {
+    return null; // always hide
   }
 
   return (

@@ -139,6 +139,7 @@ const createStyleMap = (
 };
 
 const getToolTipContent = (label: string, disabled: boolean) => {
+  console.log('in tooltip component');
   return (
     <>
       <div>{label}</div>
@@ -364,7 +365,8 @@ const SidePanel = ({
         data-cy={`${tabs[0].name}-btn`}
         onClick={() => updatePanelOpen(!panelOpen)}
       >
-        <span>{tabs[0].label}</span>
+        {/* <span>{tabs[0].label}</span> */}
+        <span>Scans</span>
       </div>
     );
   };

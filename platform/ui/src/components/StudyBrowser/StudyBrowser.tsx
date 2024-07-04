@@ -20,7 +20,7 @@ const getTrackedSeries = displaySets => {
   return trackedSeries;
 };
 
-const noop = () => {};
+const noop = () => { };
 
 const StudyBrowser = ({
   tabs,
@@ -78,7 +78,7 @@ const StudyBrowser = ({
         data-cy={'studyBrowser-panel'}
       >
         {/* TODO Revisit design of LegacyButtonGroup later - for now use LegacyButton for its children.*/}
-        <LegacyButtonGroup
+        {/* <LegacyButtonGroup
           variant="outlined"
           color="secondary"
           splitBorder={false}
@@ -111,7 +111,7 @@ const StudyBrowser = ({
               </LegacyButton>
             );
           })}
-        </LegacyButtonGroup>
+        </LegacyButtonGroup> */}
         {window.config.experimentalStudyBrowserSort && (
           <StudyBrowserSort servicesManager={servicesManager} />
         )}

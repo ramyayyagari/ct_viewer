@@ -92,40 +92,41 @@ function HeaderPatientInfo({ servicesManager, appConfig }: withAppTypes) {
   const formattedPatientName = formatWithEllipsis(patientInfo.PatientName, 27);
   const formattedPatientID = formatWithEllipsis(patientInfo.PatientID, 15);
 
-  return (
-    <div
-      className="hover:bg-primary-dark flex cursor-pointer items-center justify-center gap-1 rounded-lg"
-      onClick={handleOnClick}
-    >
-      <Icon
-        name={isMixedPatients ? 'icon-multiple-patients' : 'icon-patient'}
-        className="text-primary-active"
-      />
-      <div className="flex flex-col justify-center">
-        {expanded ? (
-          <>
-            <div className="self-start text-[13px] font-bold text-white">
-              {formattedPatientName}
-            </div>
-            <div className="text-aqua-pale flex gap-2 text-[11px]">
-              <div>{formattedPatientID}</div>
-              <div>{patientInfo.PatientSex}</div>
-              <div>{patientInfo.PatientDOB}</div>
-            </div>
-          </>
-        ) : (
-          <div className="text-primary-active self-center text-[13px]">
-            {' '}
-            {isMixedPatients ? 'Multiple Patients' : 'Patient'}
-          </div>
-        )}
-      </div>
-      <Icon
-        name="icon-chevron-patient"
-        className={`text-primary-active ${expanded ? 'rotate-180' : ''}`}
-      />
-    </div>
-  );
+  return null;
+  // return (
+  //   <div
+  //     className="hover:bg-primary-dark flex cursor-pointer items-center justify-center gap-1 rounded-lg"
+  //     onClick={handleOnClick}
+  //   >
+  //     <Icon
+  //       name={isMixedPatients ? 'icon-multiple-patients' : 'icon-patient'}
+  //       className="text-primary-active"
+  //     />
+  //     <div className="flex flex-col justify-center">
+  //       {expanded ? (
+  //         <>
+  //           <div className="self-start text-[13px] font-bold text-white">
+  //             {formattedPatientName}
+  //           </div>
+  //           <div className="text-aqua-pale flex gap-2 text-[11px]">
+  //             <div>{formattedPatientID}</div>
+  //             <div>{patientInfo.PatientSex}</div>
+  //             <div>{patientInfo.PatientDOB}</div>
+  //           </div>
+  //         </>
+  //       ) : (
+  //         <div className="text-primary-active self-center text-[13px]">
+  //           {' '}
+  //           {isMixedPatients ? 'Multiple Patients' : 'Patient'}
+  //         </div>
+  //       )}
+  //     </div>
+  //     <Icon
+  //       name="icon-chevron-patient"
+  //       className={`text-primary-active ${expanded ? 'rotate-180' : ''}`}
+  //     />
+  //   </div>
+  // );
 }
 
 HeaderPatientInfo.propTypes = {
